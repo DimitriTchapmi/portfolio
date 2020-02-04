@@ -113,5 +113,4 @@
 			}
 		}
 	});
-$('.filter-basic').mdbFilter();
 })(jQuery);
