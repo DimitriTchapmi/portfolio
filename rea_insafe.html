@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Dimitri Tchapmi</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="index.html#page-top">DTC</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="index.html#home">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="index.html#about">A propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="index.html#service">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="index.html#work">Réalisations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="index.html#blog">Parcours</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Skew Star /-->
+  <div class="intro intro-single route bg-image" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="intro-content display-table">
+
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+  <!--/ Section Blog-Single Star /-->
+  <section class="blog-wrapper sect-pt4" id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="post-box">
+            <div class="post-thumb">
+              <img src="img/insafe.png" class="img-fluid" alt="">
+            </div>
+            <div class="post-meta">
+              <h1 class="article-title">Don’t worry, be safe!</h1>
+            </div>
+            <div class="article-content">
+              <ul>
+                <blockquote class="blockquote">
+                   <p class="mb-0">Contexte</p>
+                </blockquote>
+              </ul>
+              <p>
+                In’tech propose aux étudiants  du premier cycle de réaliser un projet informatique chaque semestre. Une occasion pour
+                les étudiants d’approfondir et d’appliquer de façon concrète les connaissances théoriques abordées en cours.
+                Les étudiants ont également la possibilité de s’épanouir techniquement, en explorant d’autres outils et technologies
+                non abordées en cours. Tout ceci dans un cadre projet très proche de ce qui se fait actuellement en milieu professionnel,
+                ce qui les prépare encore plus à leur future carrière.
+              </p>
+              <p>
+                Bien évidemment je suis suis prêté au jeu (c’est obligatoire de toutes les façons lol) et en semestre 5,
+                j’ai réalisé le projet INSAFE avec Guillaume Jauffret.
+              </p>
+              <ul>
+                  <blockquote class="blockquote">
+                     <p class="mb-0">Description</p>
+                  </blockquote>
+              </ul>
+              <p>
+                InSafe est un système de sécurité qui intègre un pare-feu, un honeypot, un outil d’analyse et traitement
+                des logs. La solution sera accessible via une interface qui permet aussi aux utilisateurs de faire des demandes
+                d’accès aux services. Si ces dernières sont acceptées par l’administrateur, elles sont automatiquement répercuté sur le pare-feu.
+              </p>
+              <ul>
+                <blockquote class="blockquote">
+                  <p class="mb-0">C'est parti !</p>
+                </blockquote>
+              </ul>
+              <p>
+                Nous avions la liberté de choisir entre “cycle en V” ou “méthode  Agile” pour notre mode projet. Ayant déjà
+                réalisé plusieurs projet en cycle V, nous voulions pratiquer autre chose donc méthode agile pour nous.
+                Nous avons commencé par recueillir les besoins de David, qui jouait le rôle de client. Nous le rencontrions officiellement
+                toutes les 2 semaines (durée d’un sprint pour nous) afin de s’assurer que la solution reste conforme à son besoin au fil du projet.
+              </p>
+              <p>
+                Nous nous sommes défini des user stories :
+                  <ul>
+                    <li>Configurer PfSense avec 3 interfaces,  un LAN, une DMZ et un réseau pour un hotspot wi-fi avec les règles adéquates.</li>
+                    <li>Configuration d’un honeypot orienté SSH avec Kippo</li>
+                    <li>Intégration dans Pfsense d’un détecteur d’intrusions (snort)</li>
+                    <li>Rediriger les logs de Pfsense,Snort et Kippo vers un analyseur de logs (Splunk,LightSquid,Logstash)</li>
+                    <li>Créer une interface web pour permettre aux utilisateurs de faire des demandes au niveau du pare-feu et possibilité pour
+                      l’admin de les valider ou pas, et le cas échéant de réaliser les actions sur le pare-feu.</li>
+                  </ul>
+                Chaque user story a ensuite été découpée en tâches. Nous avons utilisé trello comme outil collaboratif de planification.
+              </p>
+             <ul>
+                <blockquote class="blockquote">
+                   <p class="mb-0">Les mains dans le camboui</p>
+                </blockquote>
+              </ul>
+              <p>
+                Je me focalise ici sur les 2 user stories dont j’avais seul la charge,et non celles que je partageais avec mon coéquipier.
+                Je n’avais j’amais utilisé Kippo ni même entendu parlé. Je suis tombé dessus lors de la recherche d’outils qui nous aideront à
+                réussir notre projet. Je me suis documenté et j’ai commencé à l'installer pour une première prise en mains. Je l’ai fait plusieurs fois
+                et exploré au maximum les fonctionnalités. Ensuite, je me suis attaqué à la partie logs. J’avais opté pour logstash comme outil d’analyse.
+                Même travail que pour Kippo pour la prise en main. Ensuite, je suis passé à la phase configuration et intégration avec les autres outils,
+                à savoir la parefeu (pfSense), le détecteur d’intrusion snort) et le pot de miel (kippo).
+              </p>
+               <ul>
+                <blockquote class="blockquote">
+                   <p class="mb-0">Résultat</p>
+                </blockquote>
+              </ul>
+              <p>
+                Nous avons livré la solution au client dans les délais prévus. Assez satisfait du travail fourni, le client a été assez surpris du niveau d’aboutissement.
+                Nous avons exposé au forum PI comme tous les autres projets. Notre stand a suscité l’intérêt d’un bon nombre de professionnels présents ce jour là.
+                Parmis ces derniers, certains étaient prêts à nous prendre en stage dans leur entreprise ou à nous recommander. Heureusement ou malheureusement, nous avions déjà
+                accepté chacun une offre de stage à cette date là. L’école nous a sélectionné pour exposer également au forum PI de la représentation d’Agen.
+                Nous étions contents de cette opportunité. J’ai appris beaucoup de choses pendant ce projet et elles m’ont servies plus tard; notamment logstash dans mon stage
+                de 6 mois où j’ai participé à la migration vers la stack Elastic 6 (Filebeat, logstash, kibana).
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="widget-sidebar">
+            <h5 class="sidebar-title">Réalisations associées</h5>
+            <div class="sidebar-content">
+              <ul class="list-sidebar">
+                <li>
+                  <a href="#">DiorData</a>
+                </li>
+                <li>
+                  <a href="#">Migration Resiliency</a>
+                </li>
+                <li>
+                  <a href="#">Teemo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="widget-sidebar">
+            <h5 class="sidebar-title">Autres Réalisations</h5>
+            <div class="sidebar-content">
+              <ul class="list-sidebar">
+                <li>
+                  <a href="#">Mastodon</a>
+                </li>
+                <li>
+                  <a href="#">Insafe</a>
+                </li>
+                <li>
+                  <a href="#">Around The World</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="widget-sidebar widget-tags">
+            <h5 class="sidebar-title">Autres compétences</h5>
+            <div class="sidebar-content">
+              <ul>
+                <li>
+                  <a href="#">Terraform</a>
+                </li>
+                <li>
+                  <a href="#">Ansible</a>
+                </li>
+                <li>
+                  <a href="#">AWS</a>
+                </li>
+                <li>
+                  <a >Méthodes Agiles</a>
+                </li>
+                <li>
+                  <a >Management de projet</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Blog-Single End /-->
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">&copy; Copyright <strong>DTC</strong>. All Rights Reserved</p>
+              <div class="credits">
+                Designed by <a href="https://www.linkedin.com/in/dimitri-tchapmi-profile/">Dimitri Tchapmi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+   <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="js/second.js"></script>
+
+</body>
+</html>
