@@ -74,75 +74,66 @@
         <div class="col-md-8">
           <div class="post-box">
             <div class="post-thumb">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/A9lJ4D3qs0M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <img src="img/resiliency.png" class="img-fluid" alt="">
             </div>
             <div class="post-meta">
-              <h1 class="article-title">Around The World!</h1>
+              <h1 class="article-title">Projet de Migration</h1>
             </div>
             <div class="article-content">
               <ul>
                 <blockquote class="blockquote">
-                <p class="mb-0">Projet de formation humaine</p>
-              </blockquote>
+                   <p class="mb-0">Contexte</p>
+                </blockquote>
               </ul>
               <p>
-               Chaque semestre, IN’TECH propose à ses étudiants un Projet de Formation Humaine (PFH), qui permet de développer des compétences complémentaires : management, organisation, communication, formation, vente.
-                Avec, Sandya, Guillaume et Jean-Christophe, nous organisons un voyage pour 24 personnes à Dublin - Irlande. Celui-ci a pour but de découvrir la culture irlandaise.
-                C’est un projet ambitieux et qui permet de souder les étudiants dans la bonne humeur.
+                Deveryware est une entreprise éditrice de logiciels. Elle vient d’acquérir la société Resiliency qui vent
+                des outils et des formations à la gestion de crise. Ces outils et formations reposent sur un ensemble
+                d’applications web statiques et dynamiques décentralisées et hébergées chez des fournisseurs de cloud
+                différents. Deveryware veut refactorer toute la plateforme pour la conformer à ses normes internes, et
+                migrer la plateforme en interne.
               </p>
               <p>
-                À la fin du semestre 3, nous avons formé l’équipe et commencé à réfléchir sur une destination. Avant même la fin du semestre 3, nous avions arrêté notre décision sur Dublin, car c’est une ville qui regorge d’activités culturelles et de détentes tout en se trouvant à moins de deux heures de Paris.
-Nous avions également pensé à Rome et Berlin, mais après avoir regardé les billets d’avion et l’hébergement, Dublin était le plus économique tout en étant une ville attractive et disposant de nombreuses possibilités d’activités.
-Ce projet semble très intéressant, car il nous permet de développer de nombreuses compétences de gestion de budget et d’organisations logistiques entres autres. Il est évidemment très intéressant pour les élèves, car il leur permet de mieux se connaître et de découvrir un pays qu’ils ne connaissent pas forcément.
-Notre projet est la deuxième édition d’« Around The World », la première s’étant déroulée à Barcelone en janvier 2016. Deux membres de notre équipe y avaient d’ailleurs participé, ce qui nous a permis de capitaliser sur leurs expériences.
-                Nous nous fixons les objectifs suivants :
-                 <ul>
-                    <li>Réaliser 20 buvettes avant le 23 décembre</li>
-                    <li>Organiser 3 repas avant le 23 décembre</li>
-                    <li>Faire le jeu de quizz avant le 9 novembre</li>
-                    <li>Réaliser une tombola avant le 21 décembre</li>
-                    <li>Trouver un partenariat avant le 1er octobre</li>
-                    <li>Organiser le voyage à Dublin sur une durée de 4 jours entre le 12 et 15 janvier pour 24 personnes</li>
+                L’expert en charge de cette plateforme a quitté Resiliency et l’équipe de Deveryware s’est vu attribuée
+                cette charge de travail. En plus de cela, le besoin de changer d’outil et de politique de sauvegarde grandit.
+                Un besoin de ressource supplémentaire s’est fait ressentir car l’équipe Deveryware a déjà beaucoup de sujet en interne.
+                C’est dans cette optique, qu’ils font appel à Wescale et j’accepte de relever le challenge.
+
+              </p>
+              <ul>
+                  <blockquote class="blockquote">
+                     <p class="mb-0">Description</p>
+                  </blockquote>
+              </ul>
+              <p>
+                Dans cet article je fais un focus uniquement sur la partie migration de 2 applications passport et ecosystem.
+                Resiliency d’un point de vue macro comprenait :
+                     <ul>
+                        <li>Des sites web statiques hébergés sur AWS S3</li>
+                        <li>Un backend managé par AWS ebs</li>
+                        <li>une base de données hébergée par MongoCloud</li>
                   </ul>
+                Il s’agit donc de proposer un schéma d’architecture, construire l’infrastructure, définir un processus de
+                déploiement et automatiser l’ensemble.
+
               </p>
               <ul>
                 <blockquote class="blockquote">
-                <p class="mb-0">Le voyage</p>
-              </blockquote>
+                  <p class="mb-0">La recette</p>
+                </blockquote>
               </ul>
               <p>
-               Le voyage étant proposé à des étudiants, il fallait qu'il soit  à un prix abordable. Pour se faire, nous avons entrepris
-                des activités de récoltes de fonds telles que des buvettes, des tombolas, des repas, etc. Pour les buvettes, nous avons investi
-                de notre propre argent pour les premiers achats. Nous nous relayons dans les tâches. Comme tous mes coéquipiers, j'ai tenu la caisse de la buvette,
-                j'ai réalisé des crêpes et des supports de communication. J'ai entièrement réalisé le repas camerounais qui était d'ailleurs très apprécié.
-                J'ai réalisé un benchmack des bons plans et activités dans Dublin, notamment les musées et activités culturelles, night-clubs et les lieux incontournables.
-                Nous avons également trouvé un bon plan pour les transports, ce qui nous a permis d'offir une carte de transports à tous nos participants.
-                Nous avons cherché les meilleurs offres de logement et de compagnie aérienne pour le voyage. Au final les étudiants devaient débourser 200€ pour 4jours, avec les services suivants offerts par nous :
-                  <ul>
-                    <li>Carte de transports</li>
-                    <li>Petit déjeuner offert par l'hotel</li>
-                    <li>2 sorties NightClub avec entrée et première consommation offerte</li>
-                    <li>Visites du Musée Guinness, la gallerie nationale, et le chateau de Dublin</li>
-                    <li>Visite du "DunDrum shopping center" et du mythique "Temple bar"</li>
-                    <li>Un booklet avec tout le programme et les informations nécessaires</li>
-                  </ul>
+                Le début du projet ressemblait plus à un travail d’audit et d'investigation. En effet il fallait regrouper les bonnes informations par moi même. La documentation sur les composants n’était pas complète pour ceux qui en avait. J’ai commencé par recenser les services, centraliser et compléter les documentations. J’ai ensuite pris la main sur le processus existant de déploiement pour le maintien en condition opérationnelle. Avec mon équipe (un dev et un lead dev) j’ai organisé des ateliers qui ont permis de définir une architecture et de reconstruire l’existant sur une nouvelle infrastructure. Nous avons choisis ensemble les outils pour remplacer les services managés, ainsi que la processus de déploiement. Ensuite j’ai pris le relai pour construire en interne un POC avec IaC et automatisation.
               </p>
-                <ul>
-                  <blockquote class="blockquote">
-                    <p class="mb-0">On remet ça quand ?</p>
-                  </blockquote>
-                </ul>
               <p>
-                C'était la question posée par plusieurs participant à la fin su séjour. J'étais très satisfait car nous avons eu d'excellents retours de la par des participants et de notre suiveuse.
-                Nous avons été classé 4e des projets de toute l'école. J'ai développé plusieurs compétences à travers ce projet :
-                <ul>
-                    <li>Gérer un gros budget</li>
-                    <li>Gérer un groupe important</li>
-                    <li>Négocier et créer des partenariats</li>
-                    <li>Communiquer de manière écrite, orale et visuelle</li>
-                    <li>Développer des talents culinaires : préparation de repas réunionnais, indien, camerounais et chinois</li>
-                    <li>Développer des talents commerciaux.</li>
-                  </ul>
+               Le POC est testé en équipe, ensuite par quelque utilisateurs pendant plus de 2 semaines. J’ai appliqué les correctifs sur les bugs signalés et pris en compte les idées remontées pour construire la version de production. Nous avons défini un créneau horaire pour la migration et prévenu les utilisateurs à l’avance, avec un estimation du temps d’indisponibilité. Nous avons réalisé  un déploiement  Blue/Green avec succès.
+              </p>
+             <ul>
+                <blockquote class="blockquote">
+                   <p class="mb-0">Et alors ?</p>
+                </blockquote>
+              </ul>
+              <p>
+                Les utilisateurs sont très satisfaits, et trouvent les interactions avec les applications beaucoup plus fluides et agréables. On a une plateforme optimisée et maîtrisée de bout en bout. C’était mon premier projet de migration et je suis assez content car le client était très satisfait du travail accompli. A l’avenir j’aimerais me confronter à des migration où l'indisponibilité n’est pas tolérée, sur une infrastructure plus importante avec beaucoup d’utilisateurs.
               </p>
             </div>
           </div>
@@ -170,13 +161,13 @@ Notre projet est la deuxième édition d’« Around The World », la première
             <div class="sidebar-content">
               <ul class="list-sidebar">
                 <li>
-                  <a href="rea_mastodon.html">Mastodon</a>
+                  <a href="#">Mastodon</a>
                 </li>
                 <li>
-                  <a href="rea_insafe.html">Insafe</a>
+                  <a href="#">Insafe</a>
                 </li>
                 <li>
-                  <a href="rea_atw.html">Around The World</a>
+                  <a href="#">Around The World</a>
                 </li>
               </ul>
             </div>
